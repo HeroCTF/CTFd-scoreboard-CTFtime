@@ -7,7 +7,7 @@ from json import dumps
 import csv
 
 
-PLACE_INDEX, TEAM_ID_INDEX, SCORE_INDEX = 0, 1, 3
+PLACE_INDEX, TEAM_INDEX, SCORE_INDEX = 0, 1, 3
 
 def scoreboard_parser(csv_path):
     """
@@ -25,7 +25,7 @@ def scoreboard_parser(csv_path):
             if row[PLACE_INDEX] == str(place):
                 scoreboard["standings"].append({
                     "pos": place,
-                    "team": row[TEAM_ID_INDEX],
+                    "team": row[TEAM_INDEX],
                     "score": int(row[SCORE_INDEX])
                 })
                 place += 1
